@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Portfolio Builder - Professional Portfolio Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="builder-section">
+            <div class="header">
+                <h1>AI Portfolio Builder</h1>
+                <p class="subtitle">Create your professional portfolio with AI-powered content generation</p>
+            </div>
+            
+            <form id="portfolioForm">
+                <div class="form-section">
+                    <h3 class="section-title">Personal Information</h3>
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" required placeholder="John Doe">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="role">Professional Role *</label>
+                        <input type="text" id="role" required placeholder="Full Stack Developer">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="john@example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" placeholder="+1 (555) 123-4567">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" placeholder="San Francisco, CA">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="website">Website/Portfolio</label>
+                            <input type="url" id="website" placeholder="https://johndoe.com">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3 class="section-title">Professional Details</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="experience">Years of Experience</label>
+                            <input type="number" id="experience" min="0" max="50" placeholder="5">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="education">Highest Education</label>
+                            <select id="education">
+                                <option value="">Select...</option>
+                                <option value="High School">High School</option>
+                                <option value="Associate Degree">Associate Degree</option>
+                                <option value="Bachelor's Degree">Bachelor's Degree</option>
+                                <option value="Master's Degree">Master's Degree</option>
+                                <option value="PhD">PhD</option>
+                                <option value="Bootcamp">Bootcamp</option>
+                                <option value="Self-Taught">Self-Taught</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="linkedin">LinkedIn Profile</label>
+                        <input type="url" id="linkedin" placeholder="https://linkedin.com/in/johndoe">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="github">GitHub Profile</label>
+                        <input type="url" id="github" placeholder="https://github.com/johndoe">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="specialization">Area of Specialization</label>
+                        <input type="text" id="specialization" placeholder="e.g., Frontend Development, Machine Learning, Cloud Architecture">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="achievements">Key Achievements (optional)</label>
+                        <textarea id="achievements" rows="3" placeholder="e.g., Led team of 5 developers, Increased performance by 40%, Published 3 research papers"></textarea>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3 class="section-title">Customization</h3>
+                    
+                    <div class="form-group">
+                        <label for="template">Portfolio Template</label>
+                        <select id="template">
+                            <option value="modern">Modern - Clean and minimalist</option>
+                            <option value="professional">Professional - Traditional and formal</option>
+                            <option value="creative">Creative - Bold and colorful</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="colorScheme">Color Scheme</label>
+                        <select id="colorScheme">
+                            <option value="purple">Purple Gradient</option>
+                            <option value="blue">Blue Professional</option>
+                            <option value="green">Green Fresh</option>
+                            <option value="orange">Orange Creative</option>
+                            <option value="dark">Dark Mode</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-primary">
+                    <span class="btn-icon">✨</span>
+                    Generate AI Portfolio
+                </button>
+            </form>
+            
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>AI is crafting your professional portfolio...</p>
+                <p class="loading-detail">Analyzing your profile and generating personalized content</p>
+            </div>
+        </div>
+        
+        <div id="preview" class="preview-section hidden">
+            <div class="preview-header">
+                <h2>Portfolio Preview</h2>
+                <div class="preview-actions">
+                    <button id="editBtn" class="btn-icon-only" title="Edit">✏️</button>
+                    <button id="downloadBtn" class="btn-secondary">
+                        <span class="btn-icon">⬇️</span>
+                        Download HTML
+                    </button>
+                    <button id="downloadPdfBtn" class="btn-secondary">
+                        <span class="btn-icon">📄</span>
+                        Print/PDF
+                    </button>
+                </div>
+            </div>
+            <div id="portfolioPreview" class="portfolio-preview-container"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
