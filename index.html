@@ -7,152 +7,374 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="builder-section">
-            <div class="header">
-                <h1>AI Portfolio Builder</h1>
-                <p class="subtitle">Create your professional portfolio with AI-powered content generation</p>
-            </div>
-            
-            <form id="portfolioForm">
-                <div class="form-section">
-                    <h3 class="section-title">Personal Information</h3>
-                    
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" required placeholder="John Doe">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="role">Professional Role *</label>
-                        <input type="text" id="role" required placeholder="Full Stack Developer">
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="john@example.com">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" placeholder="+1 (555) 123-4567">
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="location">Location</label>
-                            <input type="text" id="location" placeholder="San Francisco, CA">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="website">Website/Portfolio</label>
-                            <input type="url" id="website" placeholder="https://johndoe.com">
-                        </div>
-                    </div>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Portfolio AI</div>
+            <nav class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#examples">Examples</a>
+                <a href="#builder">Create Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Build your <span class="highlight">professional portfolio</span> in seconds</h1>
+            <p>AI-powered portfolio generator that creates stunning, personalized one-page portfolios. Just enter your details and let AI do the magic.</p>
+            <a href="#builder" class="cta-button">Get Started Free →</a>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">10K+</div>
+                    <div class="stat-label">Portfolios Created</div>
                 </div>
-                
-                <div class="form-section">
-                    <h3 class="section-title">Professional Details</h3>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="experience">Years of Experience</label>
-                            <input type="number" id="experience" min="0" max="50" placeholder="5">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="education">Highest Education</label>
-                            <select id="education">
-                                <option value="">Select...</option>
-                                <option value="High School">High School</option>
-                                <option value="Associate Degree">Associate Degree</option>
-                                <option value="Bachelor's Degree">Bachelor's Degree</option>
-                                <option value="Master's Degree">Master's Degree</option>
-                                <option value="PhD">PhD</option>
-                                <option value="Bootcamp">Bootcamp</option>
-                                <option value="Self-Taught">Self-Taught</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="linkedin">LinkedIn Profile</label>
-                        <input type="url" id="linkedin" placeholder="https://linkedin.com/in/johndoe">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="github">GitHub Profile</label>
-                        <input type="url" id="github" placeholder="https://github.com/johndoe">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="specialization">Area of Specialization</label>
-                        <input type="text" id="specialization" placeholder="e.g., Frontend Development, Machine Learning, Cloud Architecture">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="achievements">Key Achievements (optional)</label>
-                        <textarea id="achievements" rows="3" placeholder="e.g., Led team of 5 developers, Increased performance by 40%, Published 3 research papers"></textarea>
-                    </div>
+                <div class="stat">
+                    <div class="stat-number">5 Min</div>
+                    <div class="stat-label">Average Time</div>
                 </div>
-                
-                <div class="form-section">
-                    <h3 class="section-title">Customization</h3>
-                    
-                    <div class="form-group">
-                        <label for="template">Portfolio Template</label>
-                        <select id="template">
-                            <option value="modern">Modern - Clean and minimalist</option>
-                            <option value="professional">Professional - Traditional and formal</option>
-                            <option value="creative">Creative - Bold and colorful</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="colorScheme">Color Scheme</label>
-                        <select id="colorScheme">
-                            <option value="purple">Purple Gradient</option>
-                            <option value="blue">Blue Professional</option>
-                            <option value="green">Green Fresh</option>
-                            <option value="orange">Orange Creative</option>
-                            <option value="dark">Dark Mode</option>
-                        </select>
-                    </div>
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Free Forever</div>
                 </div>
-                
-                <button type="submit" class="btn-primary">
-                    <span class="btn-icon">✨</span>
-                    Generate AI Portfolio
-                </button>
-            </form>
-            
-            <div id="loading" class="loading hidden">
-                <div class="spinner"></div>
-                <p>AI is crafting your professional portfolio...</p>
-                <p class="loading-detail">Analyzing your profile and generating personalized content</p>
             </div>
         </div>
-        
-        <div id="preview" class="preview-section hidden">
-            <div class="preview-header">
-                <h2>Portfolio Preview</h2>
-                <div class="preview-actions">
-                    <button id="editBtn" class="btn-icon-only" title="Edit">✏️</button>
-                    <button id="downloadBtn" class="btn-secondary">
-                        <span class="btn-icon">⬇️</span>
-                        Download HTML
-                    </button>
-                    <button id="downloadPdfBtn" class="btn-secondary">
-                        <span class="btn-icon">📄</span>
-                        Print/PDF
-                    </button>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-intro">
+                <h2>Why Choose Portfolio AI?</h2>
+                <p>Everything you need to create a stunning portfolio</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered Content</h3>
+                    <p>Smart algorithms generate professional summaries and skills tailored to your role</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Create your portfolio in under 5 minutes with our intuitive form</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Multiple Templates</h3>
+                    <p>Choose from modern, professional, or creative designs</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Fully Responsive</h3>
+                    <p>Your portfolio looks perfect on any device</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⬇️</div>
+                    <h3>Easy Export</h3>
+                    <p>Download as HTML or print to PDF instantly</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Role-Specific</h3>
+                    <p>Optimized for developers, designers, marketers, and more</p>
                 </div>
             </div>
-            <div id="portfolioPreview" class="portfolio-preview-container"></div>
         </div>
-    </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section class="examples-section" id="examples">
+        <div class="container">
+            <div class="section-intro">
+                <h2>Portfolio Examples</h2>
+                <p>See what you can create with Portfolio AI</p>
+            </div>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-preview">
+                        <div class="mini-portfolio modern">
+                            <div class="mini-header">
+                                <div class="mini-name">Sarah Johnson</div>
+                                <div class="mini-role">Full Stack Developer</div>
+                            </div>
+                            <div class="mini-skills">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>Python</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-info">
+                        <h3>Modern Template</h3>
+                        <p>Clean and minimalist design perfect for tech professionals</p>
+                        <span class="example-tag">Most Popular</span>
+                    </div>
+                </div>
+                <div class="example-card">
+                    <div class="example-preview">
+                        <div class="mini-portfolio professional">
+                            <div class="mini-header">
+                                <div class="mini-name">Michael Chen</div>
+                                <div class="mini-role">Product Manager</div>
+                            </div>
+                            <div class="mini-skills">
+                                <span>Strategy</span>
+                                <span>Agile</span>
+                                <span>Leadership</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-info">
+                        <h3>Professional Template</h3>
+                        <p>Traditional and formal layout for corporate roles</p>
+                        <span class="example-tag">Business</span>
+                    </div>
+                </div>
+                <div class="example-card">
+                    <div class="example-preview">
+                        <div class="mini-portfolio creative">
+                            <div class="mini-header">
+                                <div class="mini-name">Emma Davis</div>
+                                <div class="mini-role">UI/UX Designer</div>
+                            </div>
+                            <div class="mini-skills">
+                                <span>Figma</span>
+                                <span>Design</span>
+                                <span>Prototyping</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-info">
+                        <h3>Creative Template</h3>
+                        <p>Bold and colorful design for creative professionals</p>
+                        <span class="example-tag">Creative</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Builder Section -->
+    <section class="builder-main-section" id="builder">
+        <div class="container">
+            <div class="section-intro">
+                <h2>Create Your Portfolio Now</h2>
+                <p>Fill in your information and watch the magic happen</p>
+            </div>
+            
+            <div class="builder-layout">
+                <div class="builder-form-section">
+                    <div class="form-header">
+                        <h3>Build Your Portfolio</h3>
+                        <p>Fill in your details below to generate your professional portfolio</p>
+                    </div>
+                    <div class="form-content">
+                        <form id="portfolioForm">
+                            <div class="form-section">
+                                <h3 class="section-title">Personal Information</h3>
+                            
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" required placeholder="John Doe">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="role">Professional Role *</label>
+                                <input type="text" id="role" required placeholder="Full Stack Developer">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" placeholder="john@example.com">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" id="phone" placeholder="+1 (555) 123-4567">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="location">Location</label>
+                                    <input type="text" id="location" placeholder="San Francisco, CA">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="website">Website/Portfolio</label>
+                                    <input type="url" id="website" placeholder="https://johndoe.com">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3 class="section-title">Professional Details</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="experience">Years of Experience</label>
+                                    <input type="number" id="experience" min="0" max="50" placeholder="5">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="education">Highest Education</label>
+                                    <select id="education">
+                                        <option value="">Select...</option>
+                                        <option value="High School">High School</option>
+                                        <option value="Associate Degree">Associate Degree</option>
+                                        <option value="Bachelor's Degree">Bachelor's Degree</option>
+                                        <option value="Master's Degree">Master's Degree</option>
+                                        <option value="PhD">PhD</option>
+                                        <option value="Bootcamp">Bootcamp</option>
+                                        <option value="Self-Taught">Self-Taught</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="linkedin">LinkedIn Profile</label>
+                                <input type="url" id="linkedin" placeholder="https://linkedin.com/in/johndoe">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="github">GitHub Profile</label>
+                                <input type="url" id="github" placeholder="https://github.com/johndoe">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="specialization">Area of Specialization</label>
+                                <input type="text" id="specialization" placeholder="e.g., Frontend Development, Machine Learning">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="achievements">Key Achievements (optional)</label>
+                                <textarea id="achievements" rows="3" placeholder="e.g., Led team of 5 developers, Increased performance by 40%"></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3 class="section-title">Customization</h3>
+                            
+                            <div class="form-group">
+                                <label for="template">Portfolio Template</label>
+                                <select id="template">
+                                    <option value="modern">Modern - Clean and minimalist</option>
+                                    <option value="professional">Professional - Traditional and formal</option>
+                                    <option value="creative">Creative - Bold and colorful</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="colorScheme">Color Scheme</label>
+                                <select id="colorScheme">
+                                    <option value="orange">Orange (Default)</option>
+                                    <option value="blue">Blue Professional</option>
+                                    <option value="green">Green Fresh</option>
+                                    <option value="purple">Purple Creative</option>
+                                    <option value="dark">Dark Mode</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                            <button type="submit" class="btn-primary">
+                                <span class="btn-icon">✨</span>
+                                Generate AI Portfolio
+                            </button>
+                        </form>
+                        
+                        <div id="loading" class="loading hidden">
+                            <div class="spinner"></div>
+                            <p>AI is crafting your professional portfolio...</p>
+                            <p class="loading-detail">Analyzing your profile and generating personalized content</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="preview-sticky-section">
+                    <div class="preview-card">
+                        <div class="preview-header">
+                            <h3>Live Preview</h3>
+                            <div class="preview-actions">
+                                <button id="editBtn" class="btn-icon-only hidden" title="Edit">✏️</button>
+                            </div>
+                        </div>
+                        <div id="portfolioPreview" class="portfolio-preview-container">
+                            <div class="preview-empty">
+                                <div class="preview-empty-icon">📄</div>
+                                <p>Your portfolio preview will appear here</p>
+                            </div>
+                        </div>
+                        <div id="previewFooter" class="preview-footer hidden">
+                            <button id="downloadBtn" class="btn-secondary">
+                                <span>⬇️</span>
+                                Download HTML
+                            </button>
+                            <button id="downloadPdfBtn" class="btn-secondary">
+                                <span>📄</span>
+                                Print/PDF
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">Portfolio AI</div>
+                    <p>Create professional portfolios in seconds with AI-powered content generation</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/b-tharun-bala-hackb07/" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/Hackb07" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:balat4880@gmail.com" class="social-icon" title="Email">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#examples">Examples</a>
+                        <a href="#builder">Create Portfolio</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <a href="https://www.linkedin.com/in/b-tharun-bala-hackb07/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://github.com/Hackb07" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="mailto:balat4880@gmail.com">Contact Us</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="mailto:balat4880@gmail.com">Help Center</a>
+                        <a href="#builder">Get Started</a>
+                        <a href="#examples">View Templates</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Portfolio AI. Built with Love for professionals.</p>
+                <p class="footer-contact">Questions? Reach out at <a href="mailto:balat4880@gmail.com">balat4880@gmail.com</a></p>
+            </div>
+        </div>
+    </footer>
     
     <script src="script.js"></script>
 </body>

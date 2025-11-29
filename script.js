@@ -258,7 +258,8 @@ document.getElementById('portfolioForm').addEventListener('submit', async (e) =>
     
     // Show loading
     document.getElementById('loading').classList.remove('hidden');
-    document.getElementById('preview').classList.add('hidden');
+    document.getElementById('previewFooter').classList.add('hidden');
+    document.getElementById('editBtn').classList.add('hidden');
     document.getElementById('portfolioForm').style.display = 'none';
     
     try {
@@ -276,7 +277,8 @@ document.getElementById('portfolioForm').addEventListener('submit', async (e) =>
         
         // Hide loading, show preview
         document.getElementById('loading').classList.add('hidden');
-        document.getElementById('preview').classList.remove('hidden');
+        document.getElementById('previewFooter').classList.remove('hidden');
+        document.getElementById('editBtn').classList.remove('hidden');
         
         // Store data for download
         window.currentPortfolio = portfolioData;
@@ -290,9 +292,19 @@ document.getElementById('portfolioForm').addEventListener('submit', async (e) =>
 
 // Edit button handler
 document.getElementById('editBtn').addEventListener('click', () => {
-    document.getElementById('preview').classList.add('hidden');
+    document.getElementById('portfolioPreview').innerHTML = `
+        <div class="preview-empty">
+            <div class="preview-empty-icon">📄</div>
+            <p>Your portfolio preview will appear here</p>
+        </div>
+    `;
+    document.getElementById('previewFooter').classList.add('hidden');
+    document.getElementById('editBtn').classList.add('hidden');
     document.getElementById('portfolioForm').style.display = 'block';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    // Scroll to form
+    const builderSection = document.getElementById('builder');
+    builderSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 
 // Download HTML handler
