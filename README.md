@@ -65,10 +65,10 @@ No installation required! Just download and open:
 
 ```bash
 # Clone the repository
-git clone https://github.com/Hackb07/portfolio-builder.git
+git clone https://github.com/Hackb07/AI-One-Page-Portfolio-Builder-.git
 
 # Navigate to the directory
-cd portfolio-builder
+cd AI-One-Page-Portfolio-Builder-
 
 # Open in browser
 # Simply double-click index.html or open it in your browser
